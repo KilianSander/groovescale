@@ -10,7 +10,7 @@
 #' @param allow_download Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.
 #'
 #' @export
-GRV <- function(url = "https://www.dropbox.com/s/7toxntwv116t6ww/jingle.mp3?dl=0",
+GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
                 label,
                 type = tools::file_ext(url),
                 save_answer = TRUE,
