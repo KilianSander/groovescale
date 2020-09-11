@@ -1,6 +1,6 @@
 #' Grove Scale Package
 #'
-#' Contains the Groove Scale as various psychTestR functions.
+#' Contains the Experience of Groove Questionnaire as various psychTestR functions.
 #'
 #' @docType package
 #'

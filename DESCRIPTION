@@ -4,7 +4,7 @@ Title: Groove Scale (psychTestR implementation)
 Version: 0.1.0
 Author: Kilian Sander
 Maintainer: Kilian Sander <sanderk@stud.hmtm-hannover.de>
-Description: Contains the Groove Scale as various psychTestR functions.
+Description: Contains the Experience of Groove Questionnaire as various psychTestR functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
