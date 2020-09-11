@@ -1,0 +1,47 @@
+key,de,en
+CLOSE_BROWSER,<br>Du kannst das Browserfenster jetzt schließen.,<br>You can close the browser window now.
+CONTINUE,Weiter,Continue
+TGRV_0000_PROMPT,Fragebogen zum Groove-Empfinden,Experience of Groove Questionnaire
+TGRV_0001_PROMPT,Vorspann für die Items,Preamble for the items
+TGRV_0002_PROMPT,"Diese Musik weckt in mir den Wunsch, mich zu bewegen.",This music evokes the sensation of wanting to move some part of my body.
+TGRV_0003_PROMPT,Diese Musik ist gut zum Tanzen,This music is good for dancing.
+TGRV_0004_PROMPT,"Ich kann nicht stillsitzen, während ich diese Musik höre.",I cannot sit still while listening to this music.
+TGRV_0005_PROMPT,"Diese Musik zu hören, macht mir Vergnügen.",Listening to this music gives me pleasure.
+TGRV_0006_PROMPT,Ich höre diese Musik gern.,I like listening to this music.
+TGRV_0007_PROMPT,Diese Musik gibt mir ein gutes Gefühl.,This music makes me feel good.
+TGRV_0002_CHOICE1,1,1
+TGRV_0002_CHOICE2,2,2
+TGRV_0002_CHOICE3,3,3
+TGRV_0002_CHOICE4,4,4
+TGRV_0002_CHOICE5,5,5
+TGRV_0002_CHOICE6,6,6
+TGRV_0003_CHOICE1,1,1
+TGRV_0003_CHOICE2,2,2
+TGRV_0003_CHOICE3,3,3
+TGRV_0003_CHOICE4,4,4
+TGRV_0003_CHOICE5,5,5
+TGRV_0003_CHOICE6,6,6
+TGRV_0004_CHOICE1,1,1
+TGRV_0004_CHOICE2,2,2
+TGRV_0004_CHOICE3,3,3
+TGRV_0004_CHOICE4,4,4
+TGRV_0004_CHOICE5,5,5
+TGRV_0004_CHOICE6,6,6
+TGRV_0005_CHOICE1,1,1
+TGRV_0005_CHOICE2,2,2
+TGRV_0005_CHOICE3,3,3
+TGRV_0005_CHOICE4,4,4
+TGRV_0005_CHOICE5,5,5
+TGRV_0005_CHOICE6,6,6
+TGRV_0006_CHOICE1,1,1
+TGRV_0006_CHOICE2,2,2
+TGRV_0006_CHOICE3,3,3
+TGRV_0006_CHOICE4,4,4
+TGRV_0006_CHOICE5,5,5
+TGRV_0006_CHOICE6,6,6
+TGRV_0007_CHOICE1,1,1
+TGRV_0007_CHOICE2,2,2
+TGRV_0007_CHOICE3,3,3
+TGRV_0007_CHOICE4,4,4
+TGRV_0007_CHOICE5,5,5
+TGRV_0007_CHOICE6,6,6
