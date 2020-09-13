@@ -30,7 +30,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
     for (i in 1:6) {
       choices <- append(choices, paste0("TGRV_000",item,"_CHOICE",i), i)
     }
-    itempage <- audio_NAFC_page(label = paste(item, sep = "."),
+    itempage <- psychTestR::audio_NAFC_page(label = paste(item, sep = "."),
                     prompt = paste0("TGRV_000",item,"_PROMPT"),
                     choices = choices,
                     url = url,
@@ -43,11 +43,11 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                     admin_ui = admin_ui,
                     show_controls = show_controls,
                     allow_download = allow_download)
-    elts <- join(elts, itempage)
+    elts <- psychTestR::join(elts, itempage)
   }
-  join(begin_module(label = paste("GRV", label, sep = "_")),
+  psychTestR::join(psychTestR::begin_module(label = paste("GRV", label, sep = "_")),
        elts,
-       elt_save_results_to_disk(complete = TRUE),
-       end_module())
+       psychTestR::elt_save_results_to_disk(complete = TRUE),
+       psychTestR::end_module())
 }
 
