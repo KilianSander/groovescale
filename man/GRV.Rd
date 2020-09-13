@@ -5,8 +5,9 @@
 \title{Experience of Groove Questionnaire}
 \usage{
 GRV(
-  url = "https://www.dropbox.com/s/7toxntwv116t6ww/jingle.mp3?dl=0",
-  label,
+ 
+    url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
+  label = "GRV",
   type = tools::file_ext(url),
   save_answer = TRUE,
   on_complete = NULL,
@@ -26,6 +27,14 @@ GRV(
 \item{type}{Audio type (e.g. 'mp3'). Defaults to the provided file extension.}
 
 \item{save_answer}{Whether or not to save the answer.}
+
+\item{arrange_choices_vertically}{Whether to arrange the response buttons vertically (the default) as opposed to horizontally.}
+
+\item{wait}{Whether to wait for the audio to finish before displaying the response buttons.}
+
+\item{loop}{Whether the audio should loop.}
+
+\item{admin_ui}{Optional UI component for the admin panel.}
 
 \item{show_controls}{Whether or not to show audio controls to the participant, so that they can control audio playback.}
 
