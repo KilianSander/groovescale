@@ -2,4 +2,5 @@
 
 export(GRV)
 export(GRV_standalone)
+export(languages)
 export(test)
