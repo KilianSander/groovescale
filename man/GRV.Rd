@@ -16,7 +16,8 @@ GRV(
   loop = FALSE,
   admin_ui = NULL,
   show_controls = TRUE,
-  allow_download = FALSE
+  allow_download = FALSE,
+  ...
 )
 }
 \arguments{
@@ -39,6 +40,8 @@ GRV(
 \item{show_controls}{Whether or not to show audio controls to the participant, so that they can control audio playback.}
 
 \item{allow_download}{Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
+
+\item{...}{Further arguments to be passed to \code{GRV()}}
 }
 \description{
 This functions defines an Experience of Groove Questionnaire module with one page per item for incorporation in a psychTestR timeline.

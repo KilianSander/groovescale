@@ -12,6 +12,7 @@
 #' @param admin_ui Optional UI component for the admin panel.
 #' @param show_controls Whether or not to show audio controls to the participant, so that they can control audio playback.
 #' @param allow_download Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.
+#' @param ... Further arguments to be passed to \code{GRV()}
 #'
 #' @export
 GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
@@ -24,7 +25,8 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                 loop = FALSE,
                 admin_ui = NULL,
                 show_controls = TRUE,
-                allow_download = FALSE) {
+                allow_download = FALSE,
+                ...) {
   # randomize items
   order <- sample(2:7,6)
   # build page per item
@@ -34,20 +36,23 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
     for (i in 1:6) {
       choices <- append(choices, paste0("TGRV_000",item,"_CHOICE",i), i)
     }
-    itempage <- psychTestR::audio_NAFC_page(label = paste(item, sep = "."),
-                    prompt = paste0("TGRV_000",item,"_PROMPT"),
-                    choices = choices,
-                    url = url,
-                    type = type,
-                    save_answer = save_answer,
-                    on_complete = on_complete,
-                    arrange_choices_vertically = arrange_choices_vertically,
-                    wait = wait,
-                    loop = loop,
-                    admin_ui = admin_ui,
-                    show_controls = show_controls,
-                    allow_download = allow_download)
-    elts <- psychTestR::join(elts, itempage)
+    itempage <- psychTestR::new_timeline(
+      psychTestR::audio_NAFC_page(
+        label = paste(item, sep = "."),
+        prompt = paste0("TGRV_000",item,"_PROMPT"),
+        choices = choices,
+        url = url,
+        type = type,
+        save_answer = save_answer,
+        on_complete = on_complete,
+        arrange_choices_vertically = arrange_choices_vertically,
+        wait = wait,
+        loop = loop,
+        admin_ui = admin_ui,
+        show_controls = show_controls,
+        allow_download = allow_download)#, dict = groovescale::groovescale_dict
+      )
+    elts <- c(elts, itempage)
   }
   psychTestR::join(psychTestR::begin_module(label = paste("GRV", label, sep = "_")),
        elts,
