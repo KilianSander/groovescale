@@ -13,6 +13,11 @@
 #' @param show_controls Whether or not to show audio controls to the participant, so that they can control audio playback.
 #' @param allow_download Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.
 #' @param admin_password Password to access the admin panel.
+#' @param admin_password Password to access the admin panel.
+#' @param researcher_email Researcher's email; used in participant help message.
+#' @param validate_id Optional validation function. Type \code{?psychTestR::page} and see \code{validate} for further information.
+#' @param languages Character vector of languages that may be selected via the URL parameter 'language'. If no language is provided by the URL parameter, defaults to the first language in this vector. Languages should be encoded according to ISO 639-2 conventions. Possible languages are shown with \code{languages()}.
+#' @param ... Further arguments to be passed to \code{GRV_standalone()}
 #'
 #' @export
 GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
@@ -26,23 +31,38 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
                            admin_ui = NULL,
                            show_controls = TRUE,
                            allow_download = FALSE,
-                           admin_password = "groove") {
-  psychTestR::make_test(psychTestR::join(psychTestR::get_p_id(prompt = "ENTER_ID",
-                                                              placeholder = "EG 123456",
-                                                              button_text = "NEXT"),
-                                         GRV(url,
-                                             label = label,
-                                             type = type,
-                                             save_answer = save_answer,
-                                             on_complete = on_complete,
-                                             arrange_choices_vertically = arrange_choices_vertically,
-                                             wait = wait,
-                                             loop = loop,
-                                             admin_ui = admin_ui,
-                                             show_controls = show_controls,
-                                             allow_download = allow_download),
-                                         psychTestR::final_page("CLOSE_BROWSER")),
+                           admin_password = "groove",
+                           researcher_email = NULL,
+                           validate_id = "auto",
+                           languages = groovescale::languages(),
+                           ...) {
+  elts <- c(
+    psychTestR::new_timeline(
+      psychTestR::get_p_id(prompt = "ENTER_ID",
+                           placeholder = "EG 123456",
+                           button_text = "CONTINUE",
+                           validate = validate_id)#,
+#    dict = groovescale::groovescale_dict
+    ),
+    GRV(url,
+        label = label,
+        type = type,
+        save_answer = save_answer,
+        on_complete = on_complete,
+        arrange_choices_vertically = arrange_choices_vertically,
+        wait = wait,
+        loop = loop,
+        admin_ui = admin_ui,
+        show_controls = show_controls,
+        allow_download = allow_download,
+        ...),
+    psychTestR::new_timeline(
+      psychTestR::final_page("CLOSE_BROWSER")#, dict = groovescale::groovescale_dict
+    )
+    )
+  psychTestR::make_test(elts,
                         opt = test_options(title = "Experience of Groove Questionnaire",
-                                           admin_password = admin_password))
+                                           admin_password = admin_password,
+                                           researcher_email = researcher_email))
 }
 

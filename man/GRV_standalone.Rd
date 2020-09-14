@@ -17,7 +17,11 @@ GRV_standalone(
   admin_ui = NULL,
   show_controls = TRUE,
   allow_download = FALSE,
-  admin_password = "groove"
+  admin_password = "groove",
+  researcher_email = NULL,
+  validate_id = "auto",
+  languages = groovescale::languages(),
+  ...
 )
 }
 \arguments{
@@ -42,6 +46,14 @@ GRV_standalone(
 \item{allow_download}{Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 
 \item{admin_password}{Password to access the admin panel.}
+
+\item{researcher_email}{Researcher's email; used in participant help message.}
+
+\item{validate_id}{Optional validation function. Type \code{?psychTestR::page} and see \code{validate} for further information.}
+
+\item{languages}{Character vector of languages that may be selected via the URL parameter 'language'. If no language is provided by the URL parameter, defaults to the first language in this vector. Languages should be encoded according to ISO 639-2 conventions. Possible languages are shown with \code{languages()}.}
+
+\item{...}{Further arguments to be passed to \code{GRV_standalone()}}
 }
 \description{
 This function launches a standalone testing session for the Experience of Groove Questionnaire.
