@@ -8,4 +8,10 @@ Description: Contains the Experience of Groove Questionnaire as various psychTes
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 4.0.2)
+Imports:
+    psychTestR (>= 2.21.1)
+Remotes:
+    pmcharrison/psychTestR
 RoxygenNote: 7.1.1
