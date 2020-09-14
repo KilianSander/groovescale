@@ -1,6 +1,8 @@
 key,de,en
 CLOSE_BROWSER,<br>Du kannst das Browserfenster jetzt schließen.,<br>You can close the browser window now.
 CONTINUE,Weiter,Continue
+EG,z.B. ,e.g. 
+ENTER_ID,Bitte gib Deine ID ein,Please enter your ID
 TGRV_0000_PROMPT,Fragebogen zum Groove-Empfinden,Experience of Groove Questionnaire
 TGRV_0001_PROMPT,Vorspann für die Items,Preamble for the items
 TGRV_0002_PROMPT,"Diese Musik weckt in mir den Wunsch, mich zu bewegen.",This music evokes the sensation of wanting to move some part of my body.
