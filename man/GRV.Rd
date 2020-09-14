@@ -21,28 +21,36 @@ GRV(
 )
 }
 \arguments{
-\item{url}{URL to the audio. Can be an absolute URL (e.g. "http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g. "audio.mp3").}
+\item{url}{URL to the audio. Can be an absolute URL (e.g.
+"http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g.
+"audio.mp3").}
 
-\item{label}{Label to identify all answers corresponding to the audio given under \code{url}}
+\item{label}{Label to identify all answers corresponding to the audio given
+under \code{url}}
 
 \item{type}{Audio type (e.g. 'mp3'). Defaults to the provided file extension.}
 
 \item{save_answer}{Whether or not to save the answer.}
 
-\item{arrange_choices_vertically}{Whether to arrange the response buttons vertically (the default) as opposed to horizontally.}
+\item{arrange_choices_vertically}{Whether to arrange the response buttons
+vertically (the default) as opposed to horizontally.}
 
-\item{wait}{Whether to wait for the audio to finish before displaying the response buttons.}
+\item{wait}{Whether to wait for the audio to finish before displaying the
+response buttons.}
 
 \item{loop}{Whether the audio should loop.}
 
 \item{admin_ui}{Optional UI component for the admin panel.}
 
-\item{show_controls}{Whether or not to show audio controls to the participant, so that they can control audio playback.}
+\item{show_controls}{Whether or not to show audio controls to the
+participant, so that they can control audio playback.}
 
-\item{allow_download}{Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
+\item{allow_download}{Whether the participant is given a button to download
+the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 
 \item{...}{Further arguments to be passed to \code{GRV()}}
 }
 \description{
-This functions defines an Experience of Groove Questionnaire module with one page per item for incorporation in a psychTestR timeline.
+This functions defines an Experience of Groove Questionnaire module with one
+page per item for incorporation in a psychTestR timeline.
 }

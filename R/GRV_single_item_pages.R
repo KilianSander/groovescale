@@ -1,17 +1,25 @@
 #' Experience of Groove Questionnaire
 #'
-#' This functions defines an Experience of Groove Questionnaire module with one page per item for incorporation in a psychTestR timeline.
+#' This functions defines an Experience of Groove Questionnaire module with one
+#' page per item for incorporation in a psychTestR timeline.
 #'
-#' @param url URL to the audio. Can be an absolute URL (e.g. "http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g. "audio.mp3").
-#' @param label Label to identify all answers corresponding to the audio given under \code{url}
+#' @param url URL to the audio. Can be an absolute URL (e.g.
+#' "http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g.
+#' "audio.mp3").
+#' @param label Label to identify all answers corresponding to the audio given
+#' under \code{url}
 #' @param type Audio type (e.g. 'mp3'). Defaults to the provided file extension.
 #' @param save_answer Whether or not to save the answer.
-#' @param arrange_choices_vertically Whether to arrange the response buttons vertically (the default) as opposed to horizontally.
-#' @param wait Whether to wait for the audio to finish before displaying the response buttons.
+#' @param arrange_choices_vertically Whether to arrange the response buttons
+#' vertically (the default) as opposed to horizontally.
+#' @param wait Whether to wait for the audio to finish before displaying the
+#' response buttons.
 #' @param loop Whether the audio should loop.
 #' @param admin_ui Optional UI component for the admin panel.
-#' @param show_controls Whether or not to show audio controls to the participant, so that they can control audio playback.
-#' @param allow_download Whether the participant is given a button to download the audio file; only relevant if \code{show_controls} is \code{TRUE}.
+#' @param show_controls Whether or not to show audio controls to the
+#' participant, so that they can control audio playback.
+#' @param allow_download Whether the participant is given a button to download
+#' the audio file; only relevant if \code{show_controls} is \code{TRUE}.
 #' @param ... Further arguments to be passed to \code{GRV()}
 #'
 #' @export
