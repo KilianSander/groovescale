@@ -74,8 +74,8 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
     )
     )
   psychTestR::make_test(elts,
-                        opt = test_options(title = "Experience of Groove Questionnaire",
-                                           admin_password = admin_password,
-                                           researcher_email = researcher_email))
+                        opt = psychTestR::test_options(title = "Experience of Groove Questionnaire",
+                                                       admin_password = admin_password,
+                                                       researcher_email = researcher_email))
 }
 
