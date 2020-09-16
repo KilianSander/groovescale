@@ -66,6 +66,19 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
   }
   psychTestR::join(psychTestR::begin_module(label = paste("GRV", label, sep = "_")),
        elts,
+       #scoring
+       psychTestR::code_block(function(state, ...){
+         results <- psychTestR::get_results(state = state, complete = FALSE)
+         grv <- results[[paste("GRV", label, sep = "_")]]
+         urge_to_move <- ((as.numeric(grv[["item1"]]) + as.numeric(grv[["item2"]]) + as.numeric(grv[["item3"]]))/3)
+         pleasure <- ((as.numeric(grv[["item4"]]) + as.numeric(grv[["item5"]]) + as.numeric(grv[["item6"]]))/3)
+         general_score <- ((urge_to_move + pleasure)/2)
+         res <- c("urge_to_move", "pleasure", "general_score")
+         for (i in res) {
+           psychTestR::save_result(place = state,
+                                   label = i,
+                                   value = get(i))}
+       }),
        psychTestR::elt_save_results_to_disk(complete = TRUE),
        psychTestR::end_module())
 }
