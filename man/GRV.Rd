@@ -17,6 +17,7 @@ GRV(
   admin_ui = NULL,
   show_controls = TRUE,
   allow_download = FALSE,
+  dict = groovescale_dict,
   ...
 )
 }
@@ -47,6 +48,8 @@ participant, so that they can control audio playback.}
 
 \item{allow_download}{Whether the participant is given a button to download
 the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
+
+\item{dict}{(i18n_dict) The dictionairy used for internationalisation.}
 
 \item{...}{Further arguments to be passed to \code{GRV()}}
 }
