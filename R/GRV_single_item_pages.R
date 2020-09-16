@@ -46,7 +46,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
     choice_ids <- sprintf("TGRV_000%o_CHOICE%o", item, 1:7)
     itempage <- psychTestR::new_timeline(
       psychTestR::audio_NAFC_page(
-        label = paste(item, sep = "."),
+        label = paste0("item",item-1),
         prompt = psychTestR::i18n(paste0("TGRV_000",item,"_PROMPT")),
         choices = choices,
         labels = purrr::map(choice_ids, psychTestR::i18n),
