@@ -1,5 +1,3 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .RData
-
-data_raw
