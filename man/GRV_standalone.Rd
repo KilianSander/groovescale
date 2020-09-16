@@ -63,7 +63,7 @@ the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 URL parameter 'language'. If no language is provided by the URL parameter,
 defaults to the first language in this vector. Languages should be encoded
 according to ISO 639-2 conventions. Possible languages are shown with
-\link[groovescale]{languages()}.}
+\link[groovescale]{languages}.}
 
 \item{...}{Further arguments to be passed to \code{GRV_standalone()}}
 }

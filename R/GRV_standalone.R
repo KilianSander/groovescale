@@ -29,7 +29,7 @@
 #' URL parameter 'language'. If no language is provided by the URL parameter,
 #' defaults to the first language in this vector. Languages should be encoded
 #' according to ISO 639-2 conventions. Possible languages are shown with
-#' \link[groovescale]{languages()}.
+#' \link[groovescale]{languages}.
 #' @param ... Further arguments to be passed to \code{GRV_standalone()}
 #'
 #' @export
