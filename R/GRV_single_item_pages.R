@@ -20,6 +20,7 @@
 #' participant, so that they can control audio playback.
 #' @param allow_download Whether the participant is given a button to download
 #' the audio file; only relevant if \code{show_controls} is \code{TRUE}.
+#' @param dict (i18n_dict) The dictionairy used for internationalisation.
 #' @param ... Further arguments to be passed to \code{GRV()}
 #'
 #' @export
@@ -34,21 +35,21 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                 admin_ui = NULL,
                 show_controls = TRUE,
                 allow_download = FALSE,
+                dict = groovescale_dict,
                 ...) {
   # randomize items
   order <- sample(2:7,6)
   # build page per item
   elts <- c()
   for (item in order) {
-    choices <- c()
-    for (i in 1:7) {
-      choices <- append(choices, paste0("TGRV_000",item,"_CHOICE",i), i)
-    }
+    choices <- as.character(1:7)
+    choice_ids <- sprintf("TGRV_000%o_CHOICE%o", item, 1:7)
     itempage <- psychTestR::new_timeline(
       psychTestR::audio_NAFC_page(
         label = paste(item, sep = "."),
-        prompt = paste0("TGRV_000",item,"_PROMPT"),
+        prompt = psychTestR::i18n(paste0("TGRV_000",item,"_PROMPT")),
         choices = choices,
+        labels = purrr::map(choice_ids, psychTestR::i18n),
         url = url,
         type = type,
         save_answer = save_answer,
@@ -58,7 +59,8 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
         loop = loop,
         admin_ui = admin_ui,
         show_controls = show_controls,
-        allow_download = allow_download)#, dict = groovescale::groovescale_dict
+        allow_download = allow_download),
+        dict = dict
       )
     elts <- c(elts, itempage)
   }

@@ -29,7 +29,7 @@
 #' URL parameter 'language'. If no language is provided by the URL parameter,
 #' defaults to the first language in this vector. Languages should be encoded
 #' according to ISO 639-2 conventions. Possible languages are shown with
-#' \code{languages()}.
+#' \link[groovescale]{languages()}.
 #' @param ... Further arguments to be passed to \code{GRV_standalone()}
 #'
 #' @export
@@ -51,11 +51,11 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
                            ...) {
   elts <- c(
     psychTestR::new_timeline(
-      psychTestR::get_p_id(prompt = "ENTER_ID",
-                           placeholder = "EG 123456",
-                           button_text = "CONTINUE",
-                           validate = validate_id)#,
-#    dict = groovescale::groovescale_dict
+      psychTestR::get_p_id(prompt = psychTestR::i18n("ENTER_ID"),
+                           placeholder = paste(psychTestR::i18n("EG"), "123456", sep = " "),
+                           button_text = psychTestR::i18n("CONTINUE"),
+                           validate = validate_id),
+    dict = groovescale_dict
     ),
     GRV(url,
         label = label,
@@ -70,12 +70,20 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
         allow_download = allow_download,
         ...),
     psychTestR::new_timeline(
-      psychTestR::final_page("CLOSE_BROWSER")#, dict = groovescale::groovescale_dict
+      psychTestR::final_page(shiny::p(psychTestR::i18n("RESULTS_SAVED"),
+        psychTestR::i18n("CLOSE_BROWSER"))),
+      dict = groovescale_dict
     )
     )
+  title <- unlist(setNames(
+    purrr::map(groovescale::languages(), function(x)
+      groovescale_dict$translate("TGRV_0000_PROMPT", x)),
+    groovescale::languages()
+  ))
   psychTestR::make_test(elts,
-                        opt = psychTestR::test_options(title = "Experience of Groove Questionnaire",
+                        opt = psychTestR::test_options(title = title,
                                                        admin_password = admin_password,
-                                                       researcher_email = researcher_email))
+                                                       researcher_email = researcher_email,
+                                                       languages = languages))
 }
 
