@@ -41,7 +41,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
   elts <- c()
   for (item in order) {
     choices <- c()
-    for (i in 1:6) {
+    for (i in 1:7) {
       choices <- append(choices, paste0("TGRV_000",item,"_CHOICE",i), i)
     }
     itempage <- psychTestR::new_timeline(
