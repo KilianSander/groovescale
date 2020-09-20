@@ -4,53 +4,19 @@ CONTINUE,Weiter,Continue
 EG,z.B. ,e.g. 
 ENTER_ID,Bitte gib Deine ID ein,Please enter your ID
 RESULTS_SAVED,Deine Ergebnisse wurden gespeichert.,Your results have been saved.
-TGRV_0000_PROMPT,Fragebogen zum Groove-Empfinden,Experience of Groove Questionnaire
-TGRV_0001_PROMPT,Wie sehr stimmst Du den folgenden Aussagen zu?,Preamble for the items
-TGRV_0002_PROMPT,"Diese Musik weckt in mir den Wunsch, mich zu bewegen.",This music evokes the sensation of wanting to move some part of my body.
-TGRV_0003_PROMPT,Diese Musik ist gut zum Tanzen,This music is good for dancing.
-TGRV_0004_PROMPT,"Ich kann nicht stillsitzen, während ich diese Musik höre.",I cannot sit still while listening to this music.
-TGRV_0005_PROMPT,"Diese Musik zu hören, macht mir Vergnügen.",Listening to this music gives me pleasure.
-TGRV_0006_PROMPT,Ich höre diese Musik gern.,I like listening to this music.
-TGRV_0007_PROMPT,Diese Musik gibt mir ein gutes Gefühl.,This music makes me feel good.
-TGRV_0002_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0002_CHOICE2,Stimme nicht zu,disagree
-TGRV_0002_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0002_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0002_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0002_CHOICE6,Stimme zu,agree
-TGRV_0002_CHOICE7,Stimme voll und ganz zu,strongly agree
-TGRV_0003_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0003_CHOICE2,Stimme nicht zu,disagree
-TGRV_0003_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0003_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0003_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0003_CHOICE6,Stimme zu,agree
-TGRV_0003_CHOICE7,Stimme voll und ganz zu,strongly agree
-TGRV_0004_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0004_CHOICE2,Stimme nicht zu,disagree
-TGRV_0004_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0004_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0004_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0004_CHOICE6,Stimme zu,agree
-TGRV_0004_CHOICE7,Stimme voll und ganz zu,strongly agree
-TGRV_0005_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0005_CHOICE2,Stimme nicht zu,disagree
-TGRV_0005_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0005_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0005_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0005_CHOICE6,Stimme zu,agree
-TGRV_0005_CHOICE7,Stimme voll und ganz zu,strongly agree
-TGRV_0006_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0006_CHOICE2,Stimme nicht zu,disagree
-TGRV_0006_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0006_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0006_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0006_CHOICE6,Stimme zu,agree
-TGRV_0006_CHOICE7,Stimme voll und ganz zu,strongly agree
-TGRV_0007_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
-TGRV_0007_CHOICE2,Stimme nicht zu,disagree
-TGRV_0007_CHOICE3,Stimme eher nicht zu,slightly disagree
-TGRV_0007_CHOICE4,Weder noch,neither agree nor disagree
-TGRV_0007_CHOICE5,Stimme eher zu,slightly agree
-TGRV_0007_CHOICE6,Stimme zu,agree
-TGRV_0007_CHOICE7,Stimme voll und ganz zu,strongly agree
+TGRV_TITLE,Fragebogen zum Groove-Empfinden,Experience of Groove Questionnaire
+TGRV_ITEM_PREAMBLE,Wie sehr stimmst Du den folgenden Aussagen zu?,Preamble for the items
+TGRV_0001_PROMPT,"Diese Musik weckt in mir den Wunsch, mich zu bewegen.",This music evokes the sensation of wanting to move some part of my body.
+TGRV_0002_PROMPT,Diese Musik ist gut zum Tanzen,This music is good for dancing.
+TGRV_0003_PROMPT,"Ich kann nicht stillsitzen, während ich diese Musik höre.",I cannot sit still while listening to this music.
+TGRV_0004_PROMPT,"Diese Musik zu hören, macht mir Vergnügen.",Listening to this music gives me pleasure.
+TGRV_0005_PROMPT,Ich höre diese Musik gern.,I like listening to this music.
+TGRV_0006_PROMPT,Diese Musik gibt mir ein gutes Gefühl.,This music makes me feel good.
+TGRV_CHOICE1,Stimme ganz und gar nicht zu,strongly disagree
+TGRV_CHOICE2,Stimme nicht zu,disagree
+TGRV_CHOICE3,Stimme eher nicht zu,slightly disagree
+TGRV_CHOICE4,Weder noch,neither agree nor disagree
+TGRV_CHOICE5,Stimme eher zu,slightly agree
+TGRV_CHOICE6,Stimme zu,agree
+TGRV_CHOICE7,Stimme voll und ganz zu,strongly agree
+TGRV_INFO,Die folgenden sechs Seiten beziehen sich auf dasselbe Hörbeispiel.,The following six pages refer to the same audio example.
