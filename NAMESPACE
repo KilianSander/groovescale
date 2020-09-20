@@ -2,6 +2,7 @@
 
 export(GRV)
 export(GRV_standalone)
+export(info_page)
 export(languages)
 importFrom(psychTestR,"audio_NAFC_page")
 importFrom(psychTestR,"i18n")
