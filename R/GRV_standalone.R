@@ -20,6 +20,9 @@
 #' participant, so that they can control audio playback.
 #' @param allow_download Whether the participant is given a button to download
 #' the audio file; only relevant if \code{show_controls} is \code{TRUE}.
+#' @param info_page If set \code{TRUE} displays a page before the actual
+#' questionnaire informing the participant that the following pages refer
+#' to the same audio example
 #' @param admin_password Password to access the admin panel.
 #' @param admin_password Password to access the admin panel.
 #' @param researcher_email Researcher's email; used in participant help message.
@@ -44,6 +47,7 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
                            admin_ui = NULL,
                            show_controls = TRUE,
                            allow_download = FALSE,
+                           information = TRUE,
                            admin_password = "groove",
                            researcher_email = NULL,
                            validate_id = "auto",
@@ -68,6 +72,7 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
         admin_ui = admin_ui,
         show_controls = show_controls,
         allow_download = allow_download,
+        information = information,
         ...),
     psychTestR::new_timeline(
       psychTestR::final_page(shiny::p(psychTestR::i18n("RESULTS_SAVED"),
@@ -77,7 +82,7 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
     )
   title <- unlist(setNames(
     purrr::map(groovescale::languages(), function(x)
-      groovescale_dict$translate("TGRV_0000_PROMPT", x)),
+      groovescale_dict$translate("TGRV_TITLE", x)),
     groovescale::languages()
   ))
   psychTestR::make_test(elts,

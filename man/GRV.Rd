@@ -18,6 +18,7 @@ GRV(
   show_controls = TRUE,
   allow_download = FALSE,
   dict = groovescale_dict,
+  information = TRUE,
   ...
 )
 }
@@ -50,6 +51,10 @@ participant, so that they can control audio playback.}
 the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 
 \item{dict}{(i18n_dict) The dictionary used for internationalisation.}
+
+\item{information}{If \code{TRUE} displays a page before the actual
+questionnaire informing the participant that the following pages refer
+to the same audio example}
 
 \item{...}{Further arguments to be passed to \code{GRV()}}
 }

@@ -21,6 +21,9 @@
 #' @param allow_download Whether the participant is given a button to download
 #' the audio file; only relevant if \code{show_controls} is \code{TRUE}.
 #' @param dict (i18n_dict) The dictionary used for internationalisation.
+#' @param information If \code{TRUE} displays a page before the actual
+#' questionnaire informing the participant that the following pages refer
+#' to the same audio example
 #' @param ... Further arguments to be passed to \code{GRV()}
 #'
 #' @export
@@ -36,17 +39,20 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                 show_controls = TRUE,
                 allow_download = FALSE,
                 dict = groovescale_dict,
+                information = TRUE,
                 ...) {
   # randomize items
-  order <- sample(2:7,6)
+  order <- sample(1:6,6)
   # build page per item
-  elts <- c()
+  if(information==TRUE) {
+    elts <- info_page(dict = dict)
+  } else {elts <- c()}
+  choices <- as.character(1:7)
+  choice_ids <- sprintf("TGRV_CHOICE%o", 1:7)
   for (item in order) {
-    choices <- as.character(1:7)
-    choice_ids <- sprintf("TGRV_000%o_CHOICE%o", item, 1:7)
     itempage <- psychTestR::new_timeline(
       psychTestR::audio_NAFC_page(
-        label = paste0("item",item-1),
+        label = paste0("item",item),
         prompt = psychTestR::i18n(paste0("TGRV_000",item,"_PROMPT")),
         choices = choices,
         labels = purrr::map(choice_ids, psychTestR::i18n),
@@ -62,7 +68,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
         allow_download = allow_download),
         dict = dict
       )
-    elts <- c(elts, itempage)
+    elts <- psychTestR::join(elts, itempage)
   }
   psychTestR::join(psychTestR::begin_module(label = paste("GRV", label, sep = "_")),
        elts,
@@ -83,3 +89,21 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
        psychTestR::end_module())
 }
 
+#' Info page
+#'
+#' This function creates a page to inform a participant that the six items of
+#' the Experience of Groove Questionnaire refer to the same audio example.
+#'
+#' @param dict (i18n_dict) The dictionary used for internationalisation.
+#' @param ... Further arguments to be passed to \code{info_page}.
+#'
+#' @export
+info_page <- function(dict = groovescale::groovescale_dict,
+                      ...){
+  psychTestR::new_timeline(
+    psychTestR::one_button_page(body = psychTestR::i18n("TGRV_INFO"),
+                                button_text = psychTestR::i18n("CONTINUE")
+    ),
+    dict = dict
+  )
+}

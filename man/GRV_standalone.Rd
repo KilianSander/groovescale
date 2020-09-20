@@ -17,6 +17,7 @@ GRV_standalone(
   admin_ui = NULL,
   show_controls = TRUE,
   allow_download = FALSE,
+  information = TRUE,
   admin_password = "groove",
   researcher_email = NULL,
   validate_id = "auto",
@@ -66,6 +67,10 @@ according to ISO 639-2 conventions. Possible languages are shown with
 \link[groovescale]{languages}.}
 
 \item{...}{Further arguments to be passed to \code{GRV_standalone()}}
+
+\item{info_page}{If set \code{TRUE} displays a page before the actual
+questionnaire informing the participant that the following pages refer
+to the same audio example}
 }
 \description{
 This function launches a standalone testing session for the Experience of
