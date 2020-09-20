@@ -19,6 +19,7 @@ GRV(
   allow_download = FALSE,
   dict = groovescale_dict,
   information = TRUE,
+  welcome = FALSE,
   ...
 )
 }
@@ -55,6 +56,9 @@ the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 \item{information}{If \code{TRUE} displays a page before the actual
 questionnaire informing the participant that the following pages refer
 to the same audio example}
+
+\item{welcome}{If \code{TRUE} and \code{information} is \code{TRUE}
+displays a welcome message.}
 
 \item{...}{Further arguments to be passed to \code{GRV()}}
 }

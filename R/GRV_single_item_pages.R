@@ -24,6 +24,8 @@
 #' @param information If \code{TRUE} displays a page before the actual
 #' questionnaire informing the participant that the following pages refer
 #' to the same audio example
+#' @param welcome If \code{TRUE} and \code{information} is \code{TRUE}
+#' displays a welcome message.
 #' @param ... Further arguments to be passed to \code{GRV()}
 #'
 #' @export
@@ -40,12 +42,19 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                 allow_download = FALSE,
                 dict = groovescale_dict,
                 information = TRUE,
+                welcome = FALSE,
                 ...) {
   # randomize items
   order <- sample(1:6,6)
   # build page per item
   if(information==TRUE) {
-    elts <- info_page(dict = dict)
+    if(welcome==FALSE) {
+      elts <- info_page(dict = dict,
+                        welcome = FALSE)
+    } else {
+      elts <- info_page(dict = dict,
+                        welcome = TRUE)
+    }
   } else {elts <- c()}
   choices <- as.character(1:7)
   choice_ids <- sprintf("TGRV_CHOICE%o", 1:7)
@@ -91,19 +100,28 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
 
 #' Info page
 #'
-#' This function creates a page to inform a participant that the six items of
+#' This function creates a page to inform participants that the six items of
 #' the Experience of Groove Questionnaire refer to the same audio example.
 #'
 #' @param dict (i18n_dict) The dictionary used for internationalisation.
+#' @param welcome If \code{TRUE} displays a welcome message.
 #' @param ... Further arguments to be passed to \code{info_page}.
 #'
 #' @export
 info_page <- function(dict = groovescale::groovescale_dict,
+                      welcome = FALSE,
                       ...){
   psychTestR::new_timeline(
-    psychTestR::one_button_page(body = psychTestR::i18n("TGRV_INFO"),
-                                button_text = psychTestR::i18n("CONTINUE")
-    ),
+    if(welcome==FALSE) {
+      psychTestR::one_button_page(body = psychTestR::i18n("TGRV_INFO"),
+                                  button_text = psychTestR::i18n("CONTINUE"))
+    } else {
+      psychTestR::one_button_page(body = div(
+                                    p(psychTestR::i18n("TGRV_WELCOME")),
+                                    p(psychTestR::i18n("TGRV_INFO"))),
+                                  button_text = psychTestR::i18n("CONTINUE")
+      )
+    },
     dict = dict
   )
 }
