@@ -20,7 +20,7 @@
 #' participant, so that they can control audio playback.
 #' @param allow_download Whether the participant is given a button to download
 #' the audio file; only relevant if \code{show_controls} is \code{TRUE}.
-#' @param info_page If set \code{TRUE} displays a page before the actual
+#' @param information If set \code{TRUE} displays a page before the actual
 #' questionnaire informing the participant that the following pages refer
 #' to the same audio example
 #' @param admin_password Password to access the admin panel.

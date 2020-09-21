@@ -53,6 +53,10 @@ participant, so that they can control audio playback.}
 \item{allow_download}{Whether the participant is given a button to download
 the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 
+\item{information}{If set \code{TRUE} displays a page before the actual
+questionnaire informing the participant that the following pages refer
+to the same audio example}
+
 \item{admin_password}{Password to access the admin panel.}
 
 \item{researcher_email}{Researcher's email; used in participant help message.}
@@ -67,10 +71,6 @@ according to ISO 639-2 conventions. Possible languages are shown with
 \link[groovescale]{languages}.}
 
 \item{...}{Further arguments to be passed to \code{GRV_standalone()}}
-
-\item{info_page}{If set \code{TRUE} displays a page before the actual
-questionnaire informing the participant that the following pages refer
-to the same audio example}
 }
 \description{
 This function launches a standalone testing session for the Experience of
