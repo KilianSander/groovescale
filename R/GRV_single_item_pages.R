@@ -116,7 +116,7 @@ info_page <- function(dict = groovescale::groovescale_dict,
       psychTestR::one_button_page(body = psychTestR::i18n("TGRV_INFO"),
                                   button_text = psychTestR::i18n("CONTINUE"))
     } else {
-      psychTestR::one_button_page(body = div(
+      psychTestR::one_button_page(body = shiny::div(
                                     p(psychTestR::i18n("TGRV_WELCOME")),
                                     p(psychTestR::i18n("TGRV_INFO"))),
                                   button_text = psychTestR::i18n("CONTINUE")
