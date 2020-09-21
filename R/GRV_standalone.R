@@ -73,6 +73,7 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
         show_controls = show_controls,
         allow_download = allow_download,
         information = information,
+        welcome = TRUE,
         ...),
     psychTestR::new_timeline(
       psychTestR::final_page(shiny::p(psychTestR::i18n("RESULTS_SAVED"),

@@ -4,14 +4,16 @@
 \alias{info_page}
 \title{Info page}
 \usage{
-info_page(dict = groovescale::groovescale_dict, ...)
+info_page(dict = groovescale::groovescale_dict, welcome = FALSE, ...)
 }
 \arguments{
 \item{dict}{(i18n_dict) The dictionary used for internationalisation.}
 
+\item{welcome}{If \code{TRUE} displays a welcome message.}
+
 \item{...}{Further arguments to be passed to \code{info_page}.}
 }
 \description{
-This function creates a page to inform a participant that the six items of
+This function creates a page to inform participants that the six items of
 the Experience of Groove Questionnaire refer to the same audio example.
 }
