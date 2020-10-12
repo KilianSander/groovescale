@@ -14,6 +14,10 @@ is.scalar.logical <- function(x) {
   is.logical(x) && is.scalar(x)
 }
 
+is.character.vector <- function(x) {
+  is.vector(x) && is.character(x)
+}
+
 tagify <- function(x) {
   stopifnot(is.character(x) || is(x, "shiny.tag"))
   if (is.character(x)) {
