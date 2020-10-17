@@ -1,4 +1,41 @@
-# the final function should look like this...
+#' New multiple radiobutton NAFC page
+#'
+#' Creates a multiple radiobutton n-alternative forced choice page.
+#'
+#' @param label (Character scalar) Label for the current page.
+#'
+#' @param prompts (Character vector) Prompts to be displayed over the response
+#' choices
+#'
+#' @param choices (Character vector) Choices for the participant.
+#' If unnamed, then these values will be used both for radiobutton IDs and for
+#' button labels.
+#' If named, then values will be used for button IDs and names
+#' will be used for button labels.
+#'
+#' @param labels Optional vector of labels for the NAFC radiobutton choices.
+#' If not \code{NULL}, will overwrite the names of \code{choices}.
+#' This vector of labels can either be a character vector
+#' or a list of Shiny tag objects, e.g. as created by \code{shiny::HTML()}.
+#'
+#' @param trigger_button_text (Character scalar) Text for the trigger button.
+#'
+#' @param failed_validation_message (Character scalar) Text to be displayed
+#' when validation fails.
+#'
+#' @param save_answer (Boolean scalar) Whether or not to save the answer.
+#'
+#' @param hide_response_ui (Boolean scalar) Whether to begin with the response
+#' interface hidden (it can be subsequently made visible through Javascript,
+#' using the element ID as set in \code{response_ui_id}.
+#' See \link[psychTestR]{audio_NAFC_page} for an example.).
+#'
+#' @param response_ui_id (Character scalar) HTML ID for the response user interface.
+#'
+#' @inheritParams make_ui_multi_radiobutton_NAFC
+#' @inheritParams psychTestR::page
+#'
+#' @export
 multi_radiobutton_NAFC_page <- function(label,
                                         prompts,
                                         choices,
@@ -7,7 +44,7 @@ multi_radiobutton_NAFC_page <- function(label,
                                         trigger_button_text = "Continue",
                                         failed_validation_message = "Answer missing!",
                                         save_answer = TRUE,
-                                        hide_ui_responses = FALSE,
+                                        hide_response_ui = FALSE,
                                         response_ui_id = "response_ui",
                                         on_complete = NULL,
                                         admin_ui = NULL) {
@@ -19,16 +56,20 @@ multi_radiobutton_NAFC_page <- function(label,
     is.character.or.numeric(choices),
     length(choices) > 0L
   )
-  ui <- (
-    make_ui_multi_radiobutton_NAFC(
-      label,
-      prompts,
-      choices,
-      labels = labels,
-      trigger_button_text = trigger_button_text,
-      hide = hide_response_ui,
-      id = response_ui_id
-    )
+
+  instruction_tag <- NULL
+  if(instruction != "") {
+    instruction_tag <- tagify(instruction)
+  }
+
+  ui <- shiny::tags$div(instruction_tag,
+                        make_ui_multi_radiobutton_NAFC(label,
+                                                       prompts,
+                                                       choices,
+                                                       labels = labels,
+                                                       trigger_button_text = trigger_button_text,
+                                                       hide = hide_response_ui,
+                                                       id = response_ui_id)
   )
   get_answer <- function(input, ...)
     input[[label]]
@@ -75,6 +116,7 @@ multi_radiobutton_NAFC_page <- function(label,
 #'
 #' @param id (Character scalar) HTML ID for the div containing the radiobuttons.
 #'
+#' @export
 make_ui_multi_radiobutton_NAFC <- function(label,
                                            prompts,
                                            choices,
