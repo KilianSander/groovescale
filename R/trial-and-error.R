@@ -1,6 +1,6 @@
 itemtexts <- c("A","B","C")
 
-ui <- do.call(tagList,
+ui <- do.call(shiny::tagList,
               lapply(1:length(itemtexts), function(i){
                 shiny::tags$div(shiny::tags$b(itemtexts[i]),
                                 shiny::radioButtons(paste0("item",i),"",choices = c(1,2,3,4,5,6), inline = TRUE, selected = 0))
