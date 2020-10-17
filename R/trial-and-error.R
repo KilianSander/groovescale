@@ -1,20 +1,18 @@
-make_radiobuttons <- function(itemtexts,
-                              choices,
-                              labels = NULL) {
-  radiobuttons <- c()
-  for (i in lengths(itemtexts)) {
-    radiobuttons <- append(radiobuttons, shiny::tags$div(shiny::tags$b(itemtexts[[i]]),
-                                                         shiny::radioButtons(inputId = paste0("item", i),
-                                                                             label = "",
-                                                                             choiceNames = labels,
-                                                                             choiceValues = choices,
-                                                                             inline = TRUE,
-                                                                             selected = 0)
-                                                         )
-    )
-  }
-  itemtexts <- paste(unlist(radiobuttons),
-  return(itemtexts)
-}
+itemtexts <- c("A","B","C")
 
-Liste <- make_radiobuttons(itemtexts = c("I1","i2","I3"), choices = 1:3, labels = c("gut","mittel","schlecht"))
+ui <- do.call(tagList,
+              lapply(1:length(itemtexts), function(i){
+                shiny::tags$div(shiny::tags$b(itemtexts[i]),
+                                shiny::radioButtons(paste0("item",i),"",choices = c(1,2,3,4,5,6), inline = TRUE, selected = 0))
+                }
+                )
+              )
+
+ui_rendered <- htmltools::renderTags(ui)
+
+ui_final <- shiny::HTML(ui_rendered$html)
+
+
+?lapply
+?htmltools::renderTags()
+?htmltools::doRenderTags()
