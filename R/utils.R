@@ -18,6 +18,10 @@ is.character.vector <- function(x) {
   is.vector(x) && is.character(x)
 }
 
+is.character.or.numeric <- function(x) {
+  is.character(x) || is.numeric(x)
+}
+
 tagify <- function(x) {
   stopifnot(is.character(x) || is(x, "shiny.tag"))
   if (is.character(x)) {
