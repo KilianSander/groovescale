@@ -74,6 +74,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
         loop = loop,
         admin_ui = admin_ui,
         show_controls = show_controls,
+#        button_style = "width = 400px;", # check optimal button width
         allow_download = allow_download),
         dict = dict
       )
