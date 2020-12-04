@@ -56,7 +56,7 @@ GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescal
                         welcome = TRUE)
     }
   } else {elts <- c()}
-  choices <- as.character(1:7)
+  choices <- as.character(0:6)
   choice_ids <- sprintf("TGRV_CHOICE%o", 1:7)
   for (item in order) {
     itempage <- psychTestR::new_timeline(
