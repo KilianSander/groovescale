@@ -3,3 +3,5 @@ NULL
 
 #' @importFrom psychTestR "i18n"
 NULL
+
+#' @importFrom Rdpack "reprompt"

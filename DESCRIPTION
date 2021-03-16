@@ -1,7 +1,7 @@
 Package: groovescale
 Type: Package
 Title: Groove Scale (psychTestR implementation)
-Version: 0.1.0
+Version: 0.9.0
 Author: Kilian Sander
 Maintainer: Kilian Sander <sanderk@stud.hmtm-hannover.de>
 Description: Contains the Experience of Groove Questionnaire as various psychTestR functions.
@@ -11,7 +11,10 @@ LazyData: true
 Depends:
     R (>= 4.0.2)
 Imports:
-    psychTestR (>= 2.21.1)
+    psychTestR (>= 2.22.3),
+    Rdpack (>= 2.1)
+RdMacros:
+    Rdpack
 Remotes:
     pmcharrison/psychTestR
 RoxygenNote: 7.1.1
