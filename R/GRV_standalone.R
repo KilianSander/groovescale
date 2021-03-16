@@ -1,7 +1,8 @@
 #' Standalone Experience of Groove Questionnaire (page per item)
 #'
 #' This function launches a standalone testing session for the Experience of
-#' Groove Questionnaire with one page per item.
+#' Groove Questionnaire \insertCite{EGQPaper}{groovescale} with one page per
+#' item.
 #'
 #' @param url URL to the audio. Can be an absolute URL (e.g.
 #' "http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g.
@@ -34,6 +35,8 @@
 #' according to ISO 639-2 conventions. Possible languages are shown with
 #' \link[groovescale]{languages}.
 #' @param ... Further arguments to be passed to \code{GRV_standalone()}
+#'
+#' @references \insertAllCited{}
 #'
 #' @export
 GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
@@ -92,4 +95,3 @@ GRV_standalone <- function(url = "https://raw.githubusercontent.com/KilianSander
                                                        researcher_email = researcher_email,
                                                        languages = languages))
 }
-
