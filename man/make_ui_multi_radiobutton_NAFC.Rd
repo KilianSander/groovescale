@@ -11,6 +11,7 @@ make_ui_multi_radiobutton_NAFC(
   labels = NULL,
   trigger_button_text = "Continue",
   hide = FALSE,
+  random_order = FALSE,
   id = "response_ui"
 )
 }
@@ -33,7 +34,11 @@ or a list of Shiny tag objects, e.g. as created by \code{shiny::HTML()}.}
 
 \item{trigger_button_text}{(Character scalar) Text for the trigger button.}
 
-\item{hide}{(Boolean scalar) Whether the radiobuttons should be hidden (possibly to be shown later).}
+\item{hide}{(Boolean scalar) Whether the radiobuttons should be hidden
+(possibly to be shown later).}
+
+\item{random_order}{(Boolean scalar) Whether the order of the items should
+be randomized.}
 
 \item{id}{(Character scalar) HTML ID for the div containing the radiobuttons.}
 }
