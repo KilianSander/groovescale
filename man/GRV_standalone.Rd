@@ -74,5 +74,9 @@ according to ISO 639-2 conventions. Possible languages are shown with
 }
 \description{
 This function launches a standalone testing session for the Experience of
-Groove Questionnaire with one page per item.
+Groove Questionnaire \insertCite{EGQPaper}{groovescale} with one page per
+item.
+}
+\references{
+\insertAllCited{}
 }

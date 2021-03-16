@@ -63,6 +63,10 @@ displays a welcome message.}
 \item{...}{Further arguments to be passed to \code{GRV()}}
 }
 \description{
-This functions defines an Experience of Groove Questionnaire module with one
-page per item for incorporation in a psychTestR timeline.
+This functions defines an Experience of Groove Questionnaire
+\insertCite{EGQPaper}{groovescale} module with one page per item for
+incorporation in a psychTestR timeline.
+}
+\references{
+\insertAllCited{}
 }
