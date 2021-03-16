@@ -1,7 +1,8 @@
 #' Experience of Groove Questionnaire (page per item)
 #'
-#' This functions defines an Experience of Groove Questionnaire module with one
-#' page per item for incorporation in a psychTestR timeline.
+#' This functions defines an Experience of Groove Questionnaire
+#' \insertCite{EGQPaper}{groovescale} module with one page per item for
+#' incorporation in a psychTestR timeline.
 #'
 #' @param url URL to the audio. Can be an absolute URL (e.g.
 #' "http://mysite.com/audio.mp3") or a URL relative to the /www directory (e.g.
@@ -27,6 +28,8 @@
 #' @param welcome If \code{TRUE} and \code{information} is \code{TRUE}
 #' displays a welcome message.
 #' @param ... Further arguments to be passed to \code{GRV()}
+#'
+#' @references \insertAllCited{}
 #'
 #' @export
 GRV <- function(url = "https://raw.githubusercontent.com/KilianSander/groovescale/master/inst/www/audio/jingle.mp3",
