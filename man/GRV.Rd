@@ -2,7 +2,7 @@
 % Please edit documentation in R/GRV_single_item_pages.R
 \name{GRV}
 \alias{GRV}
-\title{Experience of Groove Questionnaire}
+\title{Experience of Groove Questionnaire (page per item)}
 \usage{
 GRV(
  

@@ -2,7 +2,7 @@
 % Please edit documentation in R/GRV_standalone.R
 \name{GRV_standalone}
 \alias{GRV_standalone}
-\title{Standalone Experience of Groove Questionnaire}
+\title{Standalone Experience of Groove Questionnaire (page per item)}
 \usage{
 GRV_standalone(
  
@@ -74,5 +74,5 @@ according to ISO 639-2 conventions. Possible languages are shown with
 }
 \description{
 This function launches a standalone testing session for the Experience of
-Groove Questionnaire.
+Groove Questionnaire with one page per item.
 }

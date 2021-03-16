@@ -1,4 +1,4 @@
-#' Experience of Groove Questionnaire
+#' Experience of Groove Questionnaire (page per item)
 #'
 #' This functions defines an Experience of Groove Questionnaire module with one
 #' page per item for incorporation in a psychTestR timeline.
