@@ -15,7 +15,7 @@ R package to include the Experience of Groove Questionnaire as various psychTest
 
 `devtools::install_github('KilianSander/groovescale')`
 
-## Implemented versions of the EGQ
-The Experience of Groove Questionnaire is implemented as a single page version (`EGQ`) and with one page per item (`GRV`).
-Both can be used within a battery of tests and questionnaires (`EGQ()` or `GRV()`), i.e. a psychTestR timeline, or in their standalone versions
-(`EGQ_standalone()` or `GRV_standalone()`).
+## Implemented variants of the EGQ
+The Experience of Groove Questionnaire is implemented as a single page (`EGQ`) and with one page per item (`GRV`).
+Both can be used within a battery of tests and questionnaires (`EGQ()` or `GRV()`), i.e. a psychTestR timeline,
+or in their standalone versions (`EGQ_standalone()` or `GRV_standalone()`).
