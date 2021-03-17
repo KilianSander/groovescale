@@ -1,5 +1,10 @@
+---
+title: "Experience of Groove Questionnaire (EGQ)"
+bibliography: inst/REFERENCES.bib
+csl: inst/apa.csl
+---
 # Experience of Groove Questionnaire (EGQ)
-R package to include the Experience of Groove Questionnaire as various psychTestR functions
+R package to include the Experience of Groove Questionnaire [@EGQPaper] as various psychTestR [@Harrison2020] functions
 
 ## Installation instructions (local use)
 
@@ -19,3 +24,5 @@ R package to include the Experience of Groove Questionnaire as various psychTest
 The Experience of Groove Questionnaire is implemented as a single page (`EGQ`) and with one page per item (`GRV`).
 Both can be used within a battery of tests and questionnaires (`EGQ()` or `GRV()`), i.e. a psychTestR timeline,
 or in their standalone versions (`EGQ_standalone()` or `GRV_standalone()`).
+
+## References
