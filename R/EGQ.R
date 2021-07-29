@@ -38,15 +38,19 @@ EGQ <- function(label = "jingle",
                    # scoring
                    psychTestR::code_block(function(state, ...){
                      results <- psychTestR::get_results(state = state, complete = FALSE)
-                     results <- as.numeric(results[[paste("EGQ", label, sep = "_")]][[label]])
+                     results <- as.integer(results[[paste("EGQ", label, sep = "_")]][[label]])
                      urge_to_move <- mean(sapply(1:3, function(i) results[i]))
                      pleasure <- mean(sapply(4:6, function(i) results[i]))
+                     #psychTestR::results(state)$results[[paste0("EGQ_", label)]][[label]] <- NULL
                      psychTestR::save_result(place = state,
                                              label = "urge_to_move",
                                              value = urge_to_move)
                      psychTestR::save_result(place = state,
                                              label = "pleasure",
-                                             value = pleasure)}),
+                                             value = pleasure)
+                     psychTestR::save_result(place = state,
+                                             label = "raw_answer",
+                                             value = results)}),
                    psychTestR::elt_save_results_to_disk(complete = TRUE),
                    psychTestR::end_module()
                    )
