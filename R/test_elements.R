@@ -59,7 +59,7 @@ multi_radiobutton_NAFC_page <- function(label,
   )
 
   instruction_tag <- NULL
-  if(instruction != "") {
+  if(all(instruction != "")) {
     instruction_tag <- tagify(instruction)
   }
 
