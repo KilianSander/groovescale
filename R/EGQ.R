@@ -47,9 +47,15 @@ EGQ <- function(label = "jingle",
                      psychTestR::save_result(place = state,
                                              label = "pleasure",
                                              value = pleasure)
-                     psychTestR::save_result(place = state,
-                                             label = "raw_answer",
-                                             value = results)
+                     #psychTestR::save_result(place = state, label = "raw_answer", value = results)
+                     lapply(1:3, function(i) {
+                       psychTestR::save_result(place = state,
+                                               label = paste0("item_m", i),
+                                               value = results[i])
+                       psychTestR::save_result(place = state,
+                                               label = paste0("item_p", i),
+                                               value = results[3+i])
+                     })
                      psychTestR::results(state)[[paste0("EGQ_", label)]][[label]] <- NULL
                      }),
                    psychTestR::elt_save_results_to_disk(complete = TRUE),
