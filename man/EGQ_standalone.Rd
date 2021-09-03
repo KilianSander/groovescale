@@ -40,7 +40,8 @@ the audio file; only relevant if \code{show_controls} is \code{TRUE}.}
 }
 \description{
 This function launches a standalone testing session for the Experience of
-Groove Questionnaire \insertCite{EGQPaper}{groovescale}.
+Groove Questionnaire \insertCite{@EGQ; @EGQPaper}{groovescale} for one
+stimulus.
 }
 \references{
 \insertAllCited{}

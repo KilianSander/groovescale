@@ -1,7 +1,7 @@
 #' Experience of Groove Questionnaire
 #'
-#' This function defines an Experience of Groove Questionnaire (EGQ;
-#' \insertCite{EGQPaper;textual}{groovescale}) module for incorporation into a
+#' This function defines an Experience of Groove Questionnaire
+#' \insertCite{@EGQ; @EGQPaper}{groovescale} module for incorporation into a
 #' psychTestR timeline. Use this function if you want to include the EGQ in a
 #' battery of other tests, or if you want to add custom psychTestR pages to
 #' your test timeline. For a standalone implementation of the EGQ, consider

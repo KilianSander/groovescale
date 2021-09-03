@@ -1,7 +1,8 @@
 #' Standalone Experience of Groove Questionnaire
 #'
 #' This function launches a standalone testing session for the Experience of
-#' Groove Questionnaire \insertCite{EGQPaper}{groovescale}.
+#' Groove Questionnaire \insertCite{@EGQ; @EGQPaper}{groovescale} for one
+#' stimulus.
 #'
 #' @inheritParams EGQ
 #'
