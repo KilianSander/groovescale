@@ -1,5 +1,5 @@
 # Experience of Groove Questionnaire (EGQ)
-R package to include the Experience of Groove Questionnaire (Senn et al., 2020) as various psychTestR (Harrison, 2020) functions
+R package to include the Experience of Groove Questionnaire (Senn et al., 2020; Düvel et al., 2021) as various psychTestR (Harrison, 2020) functions
 
 ## Installation instructions (local use)
 
@@ -21,6 +21,8 @@ Both can be used within a battery of tests and questionnaires (`EGQ()` or `GRV()
 or in their standalone versions (`EGQ_standalone()` or `GRV_standalone()`).
 
 ## References
+Düvel, N., Labonde, P., Bechtold, T., Senn, O., & Kopiez, R. (2021). Experience of groove questionnaire: German translation and validation. *Music Perception, 39*(1), 83-99. https://doi.org/10.1525/MP.2021.39.1.83
+
 Harrison, P. M. C. (2020). psychTestR: An R package for designing and conducting behavioural psychological experiments. *Journal of Open Source Software*. https://doi.org/10.21105/joss.02088
 
 Senn, O., Bechtold, T., Rose, D., Câmara, G. S., Düvel, N., Jerjen, R., Kilchenmann, L., Hoesl, F., Baldassarre, A., & Alessandri, E. (2020). Experience of groove questionnaire: Instrument development and initial validation. *Music Perception, 38*(1), 46-65. https://doi.org/10.1525/mp.2020.38.1.46
