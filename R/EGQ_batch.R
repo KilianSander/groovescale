@@ -2,7 +2,6 @@
 #'
 #' This function produces the Experience of Groove Questionnaire
 #' \insertCite{@EGQ; @EGQPaper}{groovescale} for multiple stimuli.
-#' stimuli.
 #'
 #' @param labels vector of the labels of the stimuli pages. Duplicates are not
 #' allowed.
