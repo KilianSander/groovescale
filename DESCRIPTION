@@ -1,10 +1,10 @@
 Package: groovescale
 Type: Package
-Title: Groove Scale (psychTestR implementation)
+Title: Experience of Groove Questionnaire (psychTestR implementation)
 Version: 0.9.0
 Authors@R: c(
-    person("Kilian", "Sander", email = "sanderk@stud.hmtm-hannover.de", role = c("aut", "cre")),
-    person("Philippe", "Labonde", role = c("aut"))
+    person("Kilian", "Sander", email = "kilian.sander@hmtm-hannover.de", role = c("aut", "cre"), comment=c(ORCID="0000-0003-3770-7483")),
+    person("Philippe", "Labonde", role = c("aut"), comment=c(ORCID="0000-0002-6306-4082"))
     )
 Maintainer: Kilian Sander <sanderk@stud.hmtm-hannover.de>
 Description: Contains the Experience of Groove Questionnaire as various psychTestR functions.
