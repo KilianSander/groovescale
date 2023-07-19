@@ -6,7 +6,7 @@ Authors@R: c(
     person("Kilian", "Sander", email = "kilian.sander@hmtm-hannover.de", role = c("aut", "cre"), comment=c(ORCID="0000-0003-3770-7483")),
     person("Philippe", "Labonde", role = c("aut"), comment=c(ORCID="0000-0002-6306-4082"))
     )
-Maintainer: Kilian Sander <sanderk@stud.hmtm-hannover.de>
+Maintainer: Kilian Sander <kilian.sander@hmtm-hannover.de>
 Description: Contains the Experience of Groove Questionnaire as various psychTestR functions.
 License: MIT + file LICENSE
 URL: https://github.com/KilianSander/groovescale
